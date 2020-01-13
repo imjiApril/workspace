@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <title>ryan</title>
+        <link rel="stylesheet" href="./../reset.css" />
+    </head>
+    <body>
+        <div class="face">
+            <div class="eyebrowBox">
+                <div class="eyeB01"></div>
+                <div class="eyeB02"></div>
+            </div>
+
+            <div class="eyeBox">
+                <div class="eye01"></div>
+                <div class="eye02"></div>
+            </div>
+            <div class="earBox">
+                <div class="ear01"></div>
+                <div class="ear02"></div>
+            </div>
+            <div class="noseBox">
+                <div class="noseCenter"></div>
+
+                <div class="noseBox02">
+                    <div class="noseFront01"></div>
+                    <div class="noseFront02"></div>
+                </div>
+                <div class="noseBox03">
+                    <div class="noseBack01"></div>
+                    <div class="noseBack02"></div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .face {
+                width: 500px;
+                height: 500px;
+                background-color: darkorange;
+                border-radius: 50%;
+                position: relative;
+                margin: auto;
+                top: 50px;
+                border: 6px solid black;
+                box-sizing: border-box;
+            }
+            .earBox {
+                position: relative;
+                top: -55px;
+                z-index: -1;
+            }
+            .earBox div {
+                float: left;
+                background-color: darkorange;
+                border: 6px solid black;
+                box-sizing: border-box;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+            }
+            .earBox .ear01 {
+                margin-right: 42%;
+            }
+            .earBox::after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+            .eyebrowBox {
+                position: relative;
+                top: 28%;
+            }
+
+            .eyebrowBox div {
+                float: left;
+                background-color: #000000;
+                width: 70px;
+                height: 20px;
+                border-radius: 10px;
+                margin-left: 24%;
+            }
+
+            .eyebrowBox::after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+
+            .eyeBox {
+                position: relative;
+                top: 31%;
+                left: 28%;
+            }
+
+            .eyeBox div {
+                float: left;
+                background-color: #000000;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+            .eyeBox .eye02 {
+                margin-left: 32%;
+            }
+            .eyeBox::after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+            .noseBox div {
+                float: left;
+                border-radius: 50%;
+            }
+            .noseCenter {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                background-color: #111111;
+                top: 46%;
+                left: 46%;
+            }
+            .noseBack01,
+            .noseBack02 {
+                width: 70px;
+                height: 70px;
+                background-color: #111111;
+            }
+            .noseFront01,
+            .noseFront02 {
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+            }
+            .noseBox {
+                /* position: absolute; */
+                /* ??? */
+            }
+
+            .noseBox .noseBack01 {
+            }
+            .noseBox .noseBack02 {
+            }
+
+            .noseBox .noseFront01 {
+            }
+            .noseBox .noseFront02 {
+            }
+            .noseBox::after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+        </style>
+    </body>
+</html>

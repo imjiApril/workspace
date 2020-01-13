@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>layout</title>
+    </head>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol,
+        ul {
+            list-style: none;
+        }
+        blockquote,
+        q {
+            quotes: none;
+        }
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <body>
+        <div id="wrapper">
+            <div class="box01"></div>
+            <!-- 한 개짜리 컨텐츠도 위, 아래 여백을 주기위해서 감싸는 컨텐츠를 만들어야 하나요? -->
+            <ul class="box02">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="box03">
+                <div class="box03_01">
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="box03_02">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="box04"></div>
+            <div class="box05">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box06"></div>
+            <ul class="box07">
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!-- wrapper -->
+    </body>
+
+    <style>
+        #wrapper {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .box01 {
+            height: 400px;
+            background: lightcoral;
+        }
+        .box02 {
+            width: 100%;
+            margin-top: 30px;
+        }
+        .box02 li {
+            width: 49%;
+            height: 235px;
+            background: lightcyan;
+        }
+
+        .box02 li:nth-child(odd) {
+            float: left;
+        }
+        .box02 li:nth-child(2n) {
+            float: right;
+        }
+        .box02 li:nth-child(1),
+        .box02 li:nth-child(2) {
+            margin-bottom: 20px;
+        }
+        .box02::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .box03 {
+            margin: 30px 0 30px 0;
+        }
+        .box03_01 div:first-child {
+            width: 30%;
+            height: 265px;
+            float: left;
+            background-color: lightgoldenrodyellow;
+        }
+        .box03_01 div:last-child {
+            width: 65%;
+            height: 265px;
+            float: right;
+            background-color: lightgoldenrodyellow;
+        }
+        .box03_01::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .box03_02 {
+            margin-top: 30px;
+        }
+        .box03_02 li {
+            width: 12%;
+            height: 133px;
+            float: left;
+            margin-right: 10%;
+            background-color: blanchedalmond;
+        }
+        .box03_02 li:last-child {
+            margin-right: 0;
+        }
+        .box03_02::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .box04 {
+            width: 100%;
+            height: 90px;
+            background-color: lawngreen;
+        }
+        .box05 {
+            margin: 30px 0 30px 0;
+            /* 한 번에 쓰는 방법이 뭐였징'~': m30-0-30-0 */
+        }
+        .box05 div {
+            width: 49%;
+            height: 132px;
+            background-color: lightsalmon;
+        }
+        .box05 div:first-child {
+            float: left;
+        }
+        .box05 div:last-child {
+            float: right;
+        }
+        .box05::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        .box06 {
+            height: 40px;
+            background-color: darkblue;
+        }
+        .box07 {
+            margin-top: 15px;
+        }
+        .box07 li {
+            height: 261px;
+            width: 50%;
+            float: left;
+        }
+        .box07 li:first-child{
+            background-color: darkolivegreen;
+        }
+        .box07 li:last-child{
+            background-color: darkseagreen;
+        }
+    </style>
+</html>

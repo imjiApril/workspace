@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>플로트</title>
+    </head>
+    <body>
+        <!-- <div id="box">
+            <div class="left">
+                <a href="">left</a> 
+            </div>
+            <div class="right">
+                <a href="">right</a> 
+            </div>
+        </div> 
+
+       
+
+        <style>
+            #box {
+                width: 1000px;
+                height: 500px;
+                border: 1px black solid;
+                box-sizing: border-box;
+                margin: auto;
+            }
+            #box div {
+                width: 400px;
+                height: 400px;
+                border: 1px forestgreen solid;
+                box-sizing: border-box;
+                font-size: 20px;
+                text-align: center;
+            }
+            .left {
+                float: left;
+                margin: 50px 0 0 50px;
+            }
+
+            .right {
+                float: right;
+                margin: 50px 50px 0 0;
+            }
+            #box::after {
+                content: " ";
+                clear: both;
+                display: block;
+            }
+        </style>
+        -->
+
+        <div id="listBox">
+            <ul class="liName">
+                <li>옥수수</li>
+                <li>고구마</li>
+                <li>감자</li>
+                <li>얌</li>
+                <li>구아바</li>
+            </ul>
+        </div>
+
+        <style>
+            #listBox {
+                width: 500px;
+                height: 500px;
+                background: #ccc;
+                margin: auto;
+            }
+            li {
+                list-style: none;
+                position: relative;
+                height: 50px;
+                padding-top: 15px;
+                line-height: 20px;
+                padding-left: 15px;
+            }
+            #listBox .liName li::before {
+                content: ' ';
+                display: block;
+                width: 3px;
+                height: 3px;
+                background: #000000;
+                border-radius: 50%;
+                position: absolute;
+                top: -2px;left: 0;
+            }
+        </style>
+    </body>
+</html>

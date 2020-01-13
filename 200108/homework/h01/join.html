@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>join</title>
+    </head>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol,
+        ul {
+            list-style: none;
+        }
+        blockquote,
+        q {
+            quotes: none;
+        }
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <body>
+        <div id="wrapper">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>회원아이디</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호확인</td>
+                        <td>
+                            <div class="inputBox"></div>
+                            <div>※ 확인을 위해 다시 한번 입력해주십시오.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이름</td>
+                        <td><div class="inputBox"></div></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td>
+                            <div class="inputBox"></div>
+                            <div>※ 확인을 위해 다시 한번 입력해주십시오.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>주소</td>
+                        <td>
+                            <div class="inputBox"></div>
+                            <div class="inputBox"></div>
+                            <div class="inputBox"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>핸드폰</td>
+                        <td><div class="inputBox"></div></td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td><div class="inputBox"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btnsBox">
+                <div class="btn1"><a href="#void">가입</a></div>
+                <div class="btn2"><a href="#void">취소</a></div>
+            </div>
+        </div>
+    </body>
+    <style>
+        tbody tr:first-child {
+            border-top: 3px solid #000;
+        }
+        td {
+            border: 1px solid #ccc;
+        }
+        tr td:first-child {
+            padding-left: 20px;
+            vertical-align: middle;
+            background-color: #f4f4f4;
+        }
+
+        tbody tr:nth-child(6) td:last-child {
+            height: 250px;
+        }
+        .inputBox {
+            height: 35px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        .btnsBox{
+            margin-top: 20px;
+        }
+        .btnsBox::after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        .btnsBox div {
+            float: left;
+            width: 150px;
+            height: 51px;
+            
+            border-radius: 5px;
+        }
+        .btnsBox div a {
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            padding-top: 16px;
+        }
+        .btnsBox .btn1 {
+            background-color: #333;
+            margin-right: 3px;
+        }
+        .btnsBox .btn1 a {
+            color: #fff;
+        }
+        .btnsBox .btn2 {
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    </style>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>login</title>
+    </head>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol,
+        ul {
+            list-style: none;
+        }
+        blockquote,
+        q {
+            quotes: none;
+        }
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+    <body>
+        <div id="wrapper">
+            <div class="no1">회원 로그인</div>
+            <div class="secondWrapper">
+                <div class="inputArea">
+                    <div>아이디</div>
+                    <div>비밀번호</div>
+                </div>
+                <div class="findPwd">비밀번호 찾기</div>
+                <div class="linkArea">
+                    <div class="a_login"><a href="#void">로그인</a></div>
+                    <div class="a_naver">
+                        <a href="https://www.naver.com">로 로그인</a>
+                    </div>
+                    <div class="a_join"><a href="./join.html">회원가입</a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="test" style="width: 500px;height: 500px;border: 1px solid #000;">
+            
+        </div>
+    </body>
+    <style>
+        body {
+            background-color: rgb(64, 58, 58);
+        }
+        #wrapper {
+            background-color: #fff;
+            width: 624px;
+            height: 491px;
+            margin: 50px auto;
+            padding-top: 50px;
+            padding-left: 42px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+        .no1 {
+            font-size: 27px;
+            width: 539px;
+            height: 48px;
+            border-bottom: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+        .secondWrapper {
+            padding-left: 46px;
+            padding-top: 37px;
+        }
+        .inputArea div {
+            width: 447px;
+            height: 51px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            padding-top: 17px;
+            padding-left: 12px;
+            font-weight: bold;
+            color: #ff5454;
+        }
+        .inputArea div:first-child {
+            margin-bottom: 14px;
+        }
+        .findPwd {
+            width: 447px;
+            height: 46px;
+            /* height: 59px; */
+            text-align: right;
+            padding-top: 13px;
+            font-weight: bold;
+            color: #343434;
+            /* 여기는 영역을 어떻게 줘야하나.. */
+        }
+        .linkArea {
+            width: 447px;
+        }
+        .linkArea div {
+            border: 4px solid black;
+            box-sizing: border-box;
+            padding-top: 13px;
+        }
+        .linkArea div a {
+            color: #343434;
+            width: 100%;
+            height: 100%;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+        .linkArea .a_login {
+            width: 447px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        .linkArea .a_naver {
+            width: 221px;
+            height: 50px;
+            float: left;
+            padding-left: 77px;
+            background-image: url(./img/logo/naverimg.png);
+            background-repeat: no-repeat;
+            background-position: 24px 13px;
+        }
+        .linkArea .a_join {
+            width: 222px;
+            height: 50px;
+            float: right;
+        }
+        .linkArea::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+    </style>
+</html>
