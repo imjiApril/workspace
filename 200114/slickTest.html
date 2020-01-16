@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./../reset.css" />
+    <link rel="stylesheet" href="./../slick/slick-theme.css" />
+    <link rel="stylesheet" href="./../slick/slick.css" />
+
+    <script src="./../jquery-3.4.1.min.js"></script>
+    <script src="./../slick/slick.js"></script>
+    <title>slide</title>
+  </head>
+  <body>
+    <div id="s01" class="slideWrap">
+      <div class="slide_content slide_content01">1</div>
+      <div class="slide_content slide_content02">2</div>
+      <div class="slide_content slide_content03">3</div>
+      <div class="slide_content slide_content04">4</div>
+    </div>
+    <div id="s02" class="slideWrap">
+      <div class="slide_content slide_content01"></div>
+      <div class="slide_content slide_content02"></div>
+      <div class="slide_content slide_content03"></div>
+      <div class="slide_content slide_content04"></div>
+    </div>
+    <div id="s03" class="slideWrap">
+      <div class="slide_content slide_content01"></div>
+      <div class="slide_content slide_content02"></div>
+      <div class="slide_content slide_content03"></div>
+      <div class="slide_content slide_content04"></div>
+    </div>
+    <div id="s04" class="slideWrap">
+      <div class="slide_content slide_content01"></div>
+      <div class="slide_content slide_content02"></div>
+      <div class="slide_content slide_content03"></div>
+      <div class="slide_content slide_content04"></div>
+    </div>
+    <div id="s04_nav" class="slideWrap">
+      <div class="slide_content slide_content01"></div>
+      <div class="slide_content slide_content02"></div>
+      <div class="slide_content slide_content03"></div>
+      <div class="slide_content slide_content04"></div>
+    </div>
+  </body>
+
+  <style>
+    .slideWrap {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+
+    .slide_content {
+      width: 200px; 
+      height: 100px;
+      display: block;
+    }
+
+    .slide_content01 {
+      background-color: blueviolet;
+    }
+    .slide_content02 {
+      background-color: brown;
+    }
+    .slide_content03 {
+      background-color: burlywood;
+    }
+    .slide_content04 {
+      background-color: cadetblue;
+    }
+    #s04_nav .slide_content{
+      box-sizing: border-box;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $("#s01").slick();
+
+      $("#s02").slick({
+        slidesToShow: 3
+      });
+        
+      
+
+      $("#s03").slick({
+        fade:true
+      });
+
+      $("#s04").slick({
+        slidesToShow: 1,
+       asNavFor: '#s04_nav',
+       infinite: true
+      });
+      $("#s04_nav").slick({
+        slidesToShow: 1,
+        asNavFor: '#s04',
+        focusOnSelect: true,
+        arrows: true,
+        dots:true,
+        centerMode: true,
+
+      })
+    });
+  </script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./../reset.css" />
+
+    <script src="./../jquery-3.4.1.min.js"></script>
+    <title>menu</title>
+  </head>
+  <body>
+    <div id="mainMenu_Wrap">
+      <div id="logo">dddd</div>
+      <div id="mainMenu">
+        <ul>
+          <li>대분류01</li>
+          <li>대분류02</li>
+          <li>대분류03</li>
+          <li>대분류04</li>
+          <li>대분류05</li>
+        </ul>
+      </div>
+      <div id="mainMenu_sub">
+        <ul>
+          <li>01-01</li>
+          <li>01-02</li>
+          <li>01-03</li>
+        </ul>
+        <ul>
+          <li>02-01</li>
+          <li>02-02</li>
+          <li>02-03</li>
+        </ul>
+        <ul>
+          <li>03-01</li>
+          <li>03-02</li>
+          <li>03-03</li>
+        </ul>
+        <ul>
+          <li>04-01</li>
+          <li>04-02</li>
+          <li>04-03</li>
+        </ul>
+        <ul>
+          <li>05-01</li>
+          <li>05-02</li>
+          <li>05-03</li>
+        </ul>
+      </div>
+    </div>
+    <style>
+      body {
+        width: 100%;
+      }
+      #mainMenu_Wrap {
+        width: 1200px;
+        margin: auto;
+        background-color: gainsboro;
+      }
+      #mainMenu {
+      }
+      #mainMenu ul {
+        background-color: gray;
+      }
+      #mainMenu ul li {
+        float: left;
+        width: 20%;
+        margin: 12px 0;
+        text-align: center;
+      }
+      #mainMenu ul::after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+      #mainMenu_sub {
+      }
+
+      #mainMenu_sub ul {
+        float: left;
+        width: 20%;
+        /* margin: 12px 0; */
+        text-align: center;
+        background-color: lavender;
+      }
+      #mainMenu_sub::after {
+        content: " ";
+        display: block;
+        clear: both;
+      }
+      #mainMenu_sub ul li {
+        margin: 10px 0px;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+        $("#mainMenu_sub").hide();
+        // $("#mainMenu").mouseenter(function() {
+        //   $("#mainMenu_sub").show();
+        // });
+        // // $('#mainMenu').mouseleave(function(){
+        // //     $('#mainMenu_sub').hide();
+        // // })
+        // $("#mainMenu_sub").mouseleave(function() {
+        //   $("#mainMenu_sub").hide();
+        // });
+        // $("#logo").mouseenter(function(){
+        //     $('#mainMenu_sub').hide();
+        // });
+// ani 기본속도 800
+        $("#mainMenu").mouseenter(function(){
+            $('#mainMenu_sub').stop().slideDown();
+        })
+
+        $('#mainMenu_sub').mouseleave(function(){
+            $('#mainMenu_sub').stop().slideUp(200);
+        })
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+*개별메뉴 드롭다운 / css 까지만 만들기
+1depth over -> 2depth shown
+2depth over -> 3depth shown
+
+필수
+보더(1px, boxsizing 필수, left/right border 겹치면 안된다.
+뎁스별로 색깔로 필수
+바디 배경색 지정
+
+3뎁스위치 포지션 사용(relative)
+

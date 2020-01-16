@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./../reset.css" />
+    <script src="./../jquery-3.4.1.min.js"></script>
+    <title>dropDownMenu_indivisually</title>
+  </head>
+  <body>
+    <div id="dropDown_Wrap">
+      <ul class="dropDown_main">
+        <li>
+        <a href="">대분류01</a>  
+          <ul class="dropDown_sub">
+            <li>01-01</li>
+            <li>01-02</li>
+            <li>01-03</li>
+          </ul>
+        </li>
+        <li>
+         <a href="">대분류02</a> 
+          <ul class="dropDown_sub">
+            <li>02-01</li>
+            <li>02-02</li>
+            <li>02-03</li>
+          </ul>
+        </li>
+        <li>
+         <a href="">대분류03</a> 
+          <ul class="dropDown_sub">
+            <li>03-01</li>
+            <li>03-02</li>
+            <li>03-03</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">대분류04</a> 
+          <ul class="dropDown_sub">
+            <li>04-01</li>
+            <li>04-02</li>
+            <li>04-03</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">대분류05</a> 
+          <ul class="dropDown_sub">
+            <li>05-01</li>
+            <li>05-02</li>
+            <li>05-03</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <style>
+    #dropDown_Wrap {
+    }
+    #dropDown_Wrap .dropDown_main {
+    }
+    #dropDown_Wrap .dropDown_main > li {
+      float: left;
+      width: 20%;
+      text-align: center;
+    }
+    #dropDown_Wrap .dropDown_main > li a{
+        text-decoration: none;
+        color: black;
+    }
+    #dropDown_Wrap .dropDown_main::after {
+      content: " ";
+      display: block;
+      clear: both;
+    }
+
+    #dropDown_Wrap .dropDown_main > li .dropDown_sub {
+    }
+    #dropDown_Wrap .dropDown_main > li .dropDown_sub li {
+        height: 25px;
+    }
+  </style>
+  <script>
+  $(document).ready(function(){
+      $('.dropDown_sub').hide();
+
+      $('.dropDown_main>li').mouseenter(function(){
+
+          var subMenu =$(this).children('.dropDown_sub');
+
+          subMenu.stop().slideDown();
+
+          $(this).mouseleave(function(){
+            subMenu.stop().slideUp();
+          })
+      })
+
+
+
+  })
+  </script>
+</html>
